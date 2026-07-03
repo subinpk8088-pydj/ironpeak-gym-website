@@ -1,0 +1,56 @@
+.membership-section { padding: 6rem 4rem; background: var(--bg-soft); }
+.membership-header { text-align: center; margin-bottom: 3.5rem; }
+.billing-toggle {
+  display: inline-flex; background: var(--surface); border: 1px solid var(--border);
+  border-radius: 4px; overflow: hidden; margin-top: 1.5rem;
+}
+.billing-toggle button {
+  background: none; border: none; color: var(--muted); padding: 0.6rem 1.5rem;
+  font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600;
+  letter-spacing: 0.05em; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 0.5rem;
+}
+.billing-toggle button.active { background: var(--green); color: var(--bg); }
+.save-tag { background: rgba(57,255,20,0.2); color: var(--green); font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 2px; font-weight: 700; }
+.billing-toggle button.active .save-tag { background: rgba(0,0,0,0.2); color: var(--bg); }
+
+.plans-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+.plan-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 8px; padding: 2.2rem; position: relative; transition: border-color 0.25s;
+}
+.plan-card:hover { border-color: var(--border-lt); }
+.plan-card.highlight {
+  border-color: var(--green); background: var(--surface-lt);
+  box-shadow: 0 0 48px var(--green-glow);
+}
+.plan-badge {
+  position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
+  background: var(--green); color: var(--bg); font-size: 0.68rem; font-weight: 800;
+  padding: 0.3rem 1rem; border-radius: 0 0 6px 6px; letter-spacing: 0.08em; text-transform: uppercase;
+  white-space: nowrap;
+}
+.plan-top { margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid var(--border); }
+.plan-card h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; color: var(--white); letter-spacing: 1px; margin-bottom: 0.4rem; }
+.plan-desc { font-size: 0.82rem; color: var(--muted); margin-bottom: 1.25rem; line-height: 1.5; }
+.plan-price { display: flex; align-items: baseline; gap: 0.3rem; }
+.plan-price strong { font-family: 'Bebas Neue', sans-serif; font-size: 2.6rem; color: var(--green); letter-spacing: 0.5px; }
+.plan-price span { font-size: 0.82rem; color: var(--muted); }
+.plan-features { list-style: none; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 0.75rem; }
+.plan-features li { display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.85rem; }
+.feat-yes { color: var(--off-white); }
+.feat-yes span { color: var(--green); font-weight: 700; flex-shrink: 0; }
+.feat-no { color: var(--muted); text-decoration: line-through; }
+.feat-no span { color: var(--border-lt); flex-shrink: 0; }
+.plan-btn {
+  width: 100%; background: none; border: 1.5px solid var(--border-lt); color: var(--white);
+  padding: 0.85rem; border-radius: 4px; font-family: 'Inter', sans-serif;
+  font-size: 0.88rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  cursor: pointer; transition: all 0.2s;
+}
+.plan-btn:hover { border-color: var(--green); color: var(--green); }
+.plan-btn-green { background: var(--green); border-color: var(--green); color: var(--bg); }
+.plan-btn-green:hover { background: var(--green-dk); border-color: var(--green-dk); color: var(--bg); }
+@media (max-width: 960px) {
+  .membership-section { padding: 4rem 1.5rem; }
+  .plans-grid { grid-template-columns: 1fr; max-width: 440px; }
+}

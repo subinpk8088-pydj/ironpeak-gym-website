@@ -1,0 +1,46 @@
+.timetable-section { padding: 6rem 4rem; background: var(--bg); }
+.timetable-header { text-align: center; margin-bottom: 2.5rem; }
+.timetable-header .divider { margin: 0 auto; }
+
+.day-tabs {
+  display: flex; gap: 0.5rem; justify-content: center;
+  margin-bottom: 2.5rem; flex-wrap: wrap;
+}
+.day-tab {
+  background: none; border: 1px solid var(--border); color: var(--muted);
+  padding: 0.55rem 1.4rem; border-radius: 3px; font-family: 'Inter', sans-serif;
+  font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  cursor: pointer; transition: all 0.2s;
+}
+.day-tab.active, .day-tab:hover { background: var(--green); border-color: var(--green); color: var(--bg); }
+
+.schedule-list { display: flex; flex-direction: column; gap: 0.75rem; max-width: 900px; margin: 0 auto; }
+.schedule-row { display: flex; align-items: center; gap: 1.25rem; }
+.sch-time { font-size: 0.8rem; color: var(--muted); font-weight: 600; letter-spacing: 0.04em; min-width: 72px; text-align: right; flex-shrink: 0; }
+.sch-bar {
+  flex: 1; display: flex; align-items: center; gap: 1.5rem;
+  padding: 1rem 1.25rem; border-radius: 4px; border: 1px solid var(--border);
+  transition: border-color 0.2s; flex-wrap: wrap;
+}
+.sch-bar:hover { border-color: var(--border-lt); }
+.sch-main { flex: 1; min-width: 150px; }
+.sch-main h4 { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; color: var(--white); letter-spacing: 0.5px; margin-bottom: 0.1rem; }
+.sch-main span { font-size: 0.75rem; color: var(--muted); }
+.sch-meta { display: flex; gap: 1rem; align-items: center; }
+.sch-dur { font-size: 0.78rem; color: var(--muted); }
+.sch-spots { font-size: 0.75rem; color: var(--muted); font-weight: 600; }
+.sch-spots.low { color: var(--red); }
+.sch-btn {
+  background: none; border: 1px solid var(--border-lt); color: var(--white);
+  padding: 0.5rem 1.2rem; border-radius: 3px; font-family: 'Inter', sans-serif;
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  cursor: pointer; transition: all 0.2s; flex-shrink: 0;
+}
+.sch-btn:hover { background: var(--green); border-color: var(--green); color: var(--bg); }
+
+@media (max-width: 768px) {
+  .timetable-section { padding: 4rem 1.5rem; }
+  .sch-time { min-width: 56px; font-size: 0.72rem; }
+  .sch-bar { gap: 0.75rem; }
+  .sch-meta { display: none; }
+}

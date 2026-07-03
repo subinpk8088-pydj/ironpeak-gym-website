@@ -1,0 +1,32 @@
+.trainers-section { padding: 6rem 4rem; background: var(--bg); }
+.trainers-header { text-align: center; margin-bottom: 3.5rem; }
+.trainers-sub { font-size: 0.92rem; color: var(--muted); max-width: 440px; margin: 0 auto; }
+.trainers-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; max-width: 1300px; margin: 0 auto; }
+.trainer-card { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; cursor: pointer; transition: border-color 0.25s, box-shadow 0.25s; }
+.trainer-card:hover { border-color: var(--green); box-shadow: 0 0 28px var(--green-glow); }
+.trainer-img-wrap { position: relative; aspect-ratio: 3/3.8; overflow: hidden; }
+.trainer-img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; transition: transform 0.5s; filter: grayscale(30%); }
+.trainer-card:hover .trainer-img-wrap img { transform: scale(1.05); filter: grayscale(0%); }
+.trainer-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,8,8,0.8) 0%, transparent 55%); }
+.trainer-cert {
+  position: absolute; bottom: 1rem; left: 1rem;
+  background: var(--green); color: var(--bg); font-size: 0.65rem; font-weight: 800;
+  padding: 0.25rem 0.65rem; border-radius: 2px; letter-spacing: 0.06em;
+}
+.trainer-info { padding: 1.4rem; }
+.trainer-info h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.35rem; color: var(--white); letter-spacing: 0.5px; margin-bottom: 0.25rem; }
+.trainer-role { font-size: 0.8rem; color: var(--muted); margin-bottom: 1.1rem; }
+.trainer-meta { display: flex; gap: 1.5rem; margin-bottom: 1.25rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--border); }
+.trainer-meta div { display: flex; flex-direction: column; gap: 0.15rem; }
+.trainer-meta strong { font-size: 1rem; font-weight: 700; color: var(--green); }
+.trainer-meta span { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.trainer-btn {
+  width: 100%; background: none; border: 1px solid var(--border-lt); color: var(--white);
+  padding: 0.65rem; border-radius: 3px; font-family: 'Inter', sans-serif;
+  font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+  cursor: pointer; transition: all 0.2s;
+}
+.trainer-btn:hover { background: var(--green); border-color: var(--green); color: var(--bg); }
+@media (max-width: 1100px) { .trainers-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 960px) { .trainers-section { padding: 4rem 1.5rem; } }
+@media (max-width: 500px) { .trainers-grid { grid-template-columns: 1fr; } }

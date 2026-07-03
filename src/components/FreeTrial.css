@@ -1,0 +1,41 @@
+.freetrial-section { position: relative; padding: 8rem 2rem; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.freetrial-bg { position: absolute; inset: 0; }
+.freetrial-bg img { width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(50%); }
+.freetrial-scrim { position: absolute; inset: 0; background: rgba(8,8,8,0.88); }
+.freetrial-inner { position: relative; z-index: 1; max-width: 680px; width: 100%; }
+.freetrial-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3.5rem, 9vw, 7rem); color: var(--white);
+  line-height: 0.95; letter-spacing: 2px; margin-bottom: 1.5rem;
+}
+.freetrial-title span { color: var(--green); text-shadow: 0 0 48px rgba(57,255,20,0.5); }
+.freetrial-sub { font-size: 1rem; color: rgba(255,255,255,0.65); max-width: 420px; margin-bottom: 2.5rem; line-height: 1.75; }
+.freetrial-form { background: rgba(20,20,20,0.9); border: 1px solid var(--border-lt); border-radius: 8px; padding: 2.2rem; backdrop-filter: blur(12px); }
+.ft-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+.ft-group { display: flex; flex-direction: column; gap: 0.4rem; }
+.ft-group label { font-size: 0.7rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; }
+.ft-group input, .ft-group select {
+  background: var(--bg); border: 1px solid var(--border-lt); color: var(--text);
+  padding: 0.75rem 1rem; border-radius: 4px; font-family: 'Inter', sans-serif;
+  font-size: 0.88rem; outline: none; transition: border-color 0.2s; appearance: none;
+}
+.ft-group input:focus, .ft-group select:focus { border-color: var(--green); }
+.ft-group input::placeholder { color: var(--muted); }
+.ft-group select option { background: var(--surface); }
+.freetrial-btn {
+  width: 100%; background: var(--green); color: var(--bg); border: none;
+  padding: 1rem; border-radius: 4px; font-family: 'Inter', sans-serif;
+  font-size: 0.95rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+  cursor: pointer; transition: background 0.2s; margin-top: 1rem;
+}
+.freetrial-btn:hover { background: var(--green-dk); }
+.freetrial-note { text-align: center; font-size: 0.78rem; color: var(--muted); margin-top: 1rem; }
+.freetrial-success { text-align: center; padding: 3rem 2rem; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+.freetrial-success span { font-size: 3rem; }
+.freetrial-success strong { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--green); letter-spacing: 1px; }
+.freetrial-success p { font-size: 0.9rem; color: var(--muted); max-width: 320px; line-height: 1.65; }
+@media (max-width: 600px) {
+  .freetrial-section { padding: 5rem 1.5rem; }
+  .ft-row { grid-template-columns: 1fr; }
+  .freetrial-form { padding: 1.5rem; }
+}

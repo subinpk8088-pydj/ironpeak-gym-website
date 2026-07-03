@@ -1,0 +1,66 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:         #080808;
+  --bg-soft:    #0f0f0f;
+  --surface:    #141414;
+  --surface-lt: #1c1c1c;
+  --green:      #39ff14;
+  --green-dk:   #28cc00;
+  --green-glow: rgba(57,255,20,0.12);
+  --white:      #ffffff;
+  --off-white:  #e8e8e8;
+  --muted:      #666666;
+  --border:     #222222;
+  --border-lt:  #2e2e2e;
+  --text:       #f0f0f0;
+  --red:        #ff3c3c;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+.section-label {
+  font-size: 0.72rem; letter-spacing: 0.28em;
+  color: var(--green); text-transform: uppercase;
+  margin-bottom: 0.75rem; font-weight: 600;
+}
+
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+  color: var(--white); line-height: 1.0;
+  letter-spacing: 1px; margin-bottom: 1rem;
+}
+.section-title em { font-style: normal; color: var(--green); }
+
+.divider { width: 40px; height: 3px; background: var(--green); margin-bottom: 2rem; }
+
+.btn-primary {
+  background: var(--green); color: var(--bg);
+  border: none; padding: 0.9rem 2.4rem; border-radius: 3px;
+  font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.btn-primary:hover { background: var(--green-dk); box-shadow: 0 0 24px var(--green-glow); }
+
+.btn-outline {
+  background: none; color: var(--white);
+  border: 1.5px solid var(--border-lt); padding: 0.9rem 2.4rem;
+  border-radius: 3px; font-family: 'Inter', sans-serif; font-size: 0.9rem;
+  font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+  cursor: pointer; transition: all 0.2s;
+}
+.btn-outline:hover { border-color: var(--green); color: var(--green); }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--green-dk); border-radius: 3px; }
